@@ -1,73 +1,132 @@
-# Welcome to your Lovable project
+# PointPal - Referral Rewards System
 
-## Project info
+A modern referral and rewards platform built with React and TypeScript. Users can share referral codes with friends, earn points, and redeem rewards.
 
-**URL**: https://lovable.dev/projects/08a1d314-5ddc-4e32-b16c-938bb18c786c
+## Screenshots
 
-## How can I edit this code?
+![Landing Page](https://h3rcules.space/u/3bNY6q.png)
+![Dashboard](https://h3rcules.space/u/gSqWif.png)
+![Rewards Marketplace](https://h3rcules.space/u/asGAEl.png)
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+✨ **Referral System**
+- Unique referral codes for each user (e.g., ASH123)
+- Share via custom links or social media
+- Automatic point attribution
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/08a1d314-5ddc-4e32-b16c-938bb18c786c) and start prompting.
+🎁 **Rewards Marketplace**
+- Browse available rewards
+- Redeem points for exciting prizes
+- Track redemption history
 
-Changes made via Lovable will be committed automatically to this repo.
+📊 **User Dashboard**
+- Real-time points balance
+- Referral statistics
+- Rewards history
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Framework**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui (Radix UI)
+- **Routing**: React Router v6
+- **State Management**: React Context + TanStack Query
+- **Notifications**: Sonner
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+### Prerequisites
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js 18+ or Bun runtime
+- npm, yarn, or bun package manager
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Installation
 
-# Step 3: Install the necessary dependencies.
-npm i
+```bash
+# Clone the repository
+git clone <repository-url>
+cd point-pal-refer
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Install dependencies
+npm install
+# or
+bun install
+
+# Start development server
 npm run dev
+# or
+bun dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+# Create production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build
+npm run preview
+```
 
-## What technologies are used for this project?
+## How It Works
 
-This project is built with:
+1. **Sign Up**: Create an account and receive a unique referral code
+2. **Share**: Invite friends using your referral link or code
+3. **Earn Points**: 
+   - Get 10 points for each successful referral
+   - New users get 5 points when signing up with a referral code
+4. **Redeem**: Browse the rewards marketplace and redeem your points
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/        # Reusable UI components
+│   ├── ui/           # shadcn/ui components
+│   ├── AuthForm.tsx  # Login/Signup forms
+│   ├── Header.tsx    # Navigation header
+│   └── ...           # Other components
+├── context/          # React Context providers
+│   └── AuthContext.tsx
+├── pages/            # Route pages
+│   ├── Index.tsx     # Landing page
+│   ├── Dashboard.tsx # User dashboard
+│   └── Rewards.tsx   # Rewards marketplace
+├── types/            # TypeScript interfaces
+├── utils/            # Utility functions
+│   ├── referral.ts   # Referral code generation
+│   ├── rewards.ts    # Reward management
+│   └── localStorage-init.ts
+└── lib/              # Shared libraries
+```
 
-Simply open [Lovable](https://lovable.dev/projects/08a1d314-5ddc-4e32-b16c-938bb18c786c) and click on Share -> Publish.
+## Available Scripts
 
-## Can I connect a custom domain to my Lovable project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build in development mode
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-Yes, you can!
+## Configuration
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Tailwind Theme
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Custom brand colors are defined in `tailwind.config.ts`:
+- `brand-purple`: #9b87f5
+- `brand-purpleDark`: #7E69AB
+- `brand-softBlue`: #D3E4FD
+- `brand-softPurple`: #E5DEFF
+- `brand-softGreen`: #F2FCE2
+
+### Environment
+
+This demo uses localStorage for data persistence. In production, integrate with a proper backend API.
+
+## License
+
+MIT License - feel free to use this project for your own purposes.
