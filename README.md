@@ -125,7 +125,7 @@ Custom brand colors are defined in `tailwind.config.ts`:
 
 ### Environment
 
-This demo uses localStorage for data persistence. In production, integrate with a proper backend API.
+This demo uses localStorage for data persistence. In production, integrate with a proper Backend API.
 
 ## License
 
